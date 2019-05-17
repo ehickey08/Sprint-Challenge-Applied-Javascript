@@ -302,23 +302,17 @@ body {
   width: 100%;
   display: none;
 }
-@keyframes slide-left {
+@keyframes photo-transition {
   0% {
-    transform: translateX(1200px);
     opacity: 0;
   }
-  100% {
-    transform: translateX(0px);
+  30% {
     opacity: 1;
   }
-}
-@keyframes slide-right {
-  0% {
-    transform: translateX(-1200px);
+  70% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
   }
 }

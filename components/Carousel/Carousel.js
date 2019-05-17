@@ -15,8 +15,8 @@ class Carousel {
     }
 
     clicked(direction){
-        console.log(direction)
         this.currentImage.style.display = 'none';
+        this.currentImage.style.animation = '';
         if(direction)
             this.index = this.index === 0 ? this.index = this.imagePool.length-1 : this.index -1; 
         else
@@ -24,6 +24,9 @@ class Carousel {
 
         this.currentImage = this.imagePool[this.index];
         this.currentImage.style.display = 'flex';
+
+        direction ? this.currentImage.style.animation = 'slide-left 1s ease-in' : this.currentImage.style.animation = 'slide-right 1s ease-in';
+        console.log(this.currentImage.style.animation);
     }
 }
 
